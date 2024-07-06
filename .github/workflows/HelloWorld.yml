@@ -1,0 +1,17 @@
+name: Hello World Workflow
+ Name: The name of the workflow is "Hello World Workflow".
+ on: [push]
+ Triggers: This workflow is triggered on a push event.
+ on: pull_request, on: watch, on: fork, on: create, on: delete, on: deployment
+ jobs:
+ hello_world_job:
+ runs-on: ubuntu-latest
+ Jobs: The workflow contains a single job named hello_world_job.
+ runs-on: This keyword specifies the operating system or environment where the job will run.
+ ubuntu-latest: The latest version of Ubuntu provided by GitHub.
+ Steps: The job contains two steps:
+ steps:- name: Checkout repository
+ uses: actions/checkout@v2
+ Checkout repository: Uses the actions/checkout@v2 action to clone the repository.- name: Print Hello World
+ run: echo "Hello, World!"
+ Print Hello World: Runs a shell command to print "Hello, World!".
